@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    background-color: #001;
+    display: flex;
+}
+/* start menu */
+.menu {
+    background-color: #123;
+    width: 50px;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    transition: 0.7s linear;
+}
+.menu:hover {
+    width: 260px;
+}
+.menu:hover + .content{
+        width: calc(100% - 270px);
+}
+.menu ul {
+    list-style: none;
+    position: relative;
+    height:95%;
+}
+.menu ul li a{
+    display: block;
+    text-decoration: none;
+    background-color: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    transition: 0.5s;
+}
+.menu ul li a:hover, .active, .data-info .box:hover, td:hover{
+    background-color: #ffffff55;
+}
+.log-out{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.log-out a{
+    background: #a00;
+} 
+.menu ul li a i {
+    font-size: 30px;
+}
+.menu ul li a p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.profile p {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+/* end menu */
+/* start content */
+.content {
+    width: calc(100% - 60px);
+}
+.dash-tape{
+    width: 95%;
+    background-color: #0481ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+.dash-tape i{
+    font-size: 20px;
+    margin-right: 30px;
+}
+.data-info {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 10px auto 10px auto;
+    width: 96%;
+}
+.data-info .box{
+    background-color: #123;
+    height: 150px;
+    flex-basis: 150px;
+    flex-grow: 1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.box i {
+    font-size: 40px;
+}
+.box .data{
+    text-align: center;
+}
+.box .data span{
+    font-size: 30px;
+}
+/* end content */
+/* start table */
+table{
+    width: 96%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #001;
+    text-align: center;
+    border-spacing: 8px;
+}   
+td, th{
+    background-color: #123;
+    height: 40px;
+    border-radius: 8px;
+}
+th{
+    background-color: #0080ff;
+}
+.price, .count{
+    padding: 6px;
+    border-radius: 6px;
+}
+.price {
+    background-color: green;
+}
+.count {
+    background-color: gold;
+    color: black;
+}
+/* end table */
